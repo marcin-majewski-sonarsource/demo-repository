@@ -6,7 +6,6 @@ from cryptography.hazmat.primitives import hashes
 
 # Example for a symmetric cipher: AES
 aes = Cipher(algorithms.AES(key), modes.CBC(iv), backend=default_backend())  # Noncompliant
-aes = Cipher(algorithms.AES(key), modes.ECB(), backend=default_backend())  # Noncompliant
 
 # Example for a asymmetric cipher: RSA
 ciphertext = public_key.encrypt(
